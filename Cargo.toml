@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/my_model_inference_backend"
+]
+resolver = "2"

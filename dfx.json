@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "my_model_inference_backend": {
+      "candid": "src/my_model_inference_backend/my_model_inference_backend.did",
+      "package": "my_model_inference_backend",
+      "type": "rust"
+    },
+    "my_model_inference_frontend": {
+      "dependencies": [
+        "my_model_inference_backend"
+      ],
+      "source": [
+        "src/my_model_inference_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "my_model_inference_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

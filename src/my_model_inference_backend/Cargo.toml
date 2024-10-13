@@ -1,14 +1,15 @@
 [package]
 name = "my_model_inference_backend"
 version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[lib]
-crate-type = ["cdylib"]
+edition = "2018"
 
 [dependencies]
-candid = "0.10"
-ic-cdk = "0.16"
-ic-cdk-timers = "0.10" # Feel free to remove this dependency if you don't need timers
+ic-cdk = "0.6.8"
+ic-cdk-macros = "0.6.8"
+tract-onnx = "0.16.0"
+ndarray = "0.15.3"  # Correct crate for arrays
+prost = "0.9.0"
+anyhow = "1.0"
+
+[lib]
+crate-type = ["cdylib"]  # Ensure this is set for canister deployment
